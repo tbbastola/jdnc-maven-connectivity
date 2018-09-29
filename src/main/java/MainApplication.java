@@ -43,8 +43,13 @@ try {
 	}
 	
 	String updateSql ="update customers set first_name= 'Tribhuvan' where first_name = 'lok'";
-	stnt.executeUpdate(updateSql);
-	c.close();
+	try {
+		stnt.executeUpdate(updateSql);
+		c.close();
+	}catch (Exception e) {
+		
+	}
+	
 	}
 
 }
